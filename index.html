@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon-32x32.png"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Advice generator app</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  </head>
+  <body>
+    <section
+      class="
+        bg-[#202632]
+        w-screen
+        h-screen
+        flex
+        justify-center
+        items-center
+        relative
+        text-white
+        lg:flex lg:justify-center lg:items-center
+      "
+    >
+      <div
+        class="
+          box
+          bg-[#313a49]
+          max-w-[90vw]
+          md:max-w-3xl
+          min-h-[60%]
+          rounded-xl
+          mt-20
+          top-24
+          absolute
+          text-center
+          flex flex-col
+          justify-evenly
+          lg:max-w-[30vw] lg:min-h-[50vh] lg:initial lg:shadow-2xl
+        "
+      >
+        <p
+          id="advice"
+          class="
+            uppercase
+            text-[#59fbab] text-[0.8em]
+            font-bold
+            tracking-[4px]
+            md:text-[1.2rem]
+            lg:text-sm
+          "
+        >
+          Advice #00
+        </p>
+        <h2
+          id="data"
+          class="
+            text-2xl
+            px-6
+            text-blue-200
+            font-semibold
+            md:text-4xl
+            lg:text-2xl
+          "
+        >
+          "Step 1. Give a shit. Step 2. Don't be a dick. Step 3. Know when to
+          let go."
+        </h2>
+        <img
+          src="images/pattern-divider-mobile.svg"
+          alt=""
+          class="px-4 mb-8 lg:hidden md:hidden"
+        />
+        <img
+          src="images/pattern-divider-desktop.svg"
+          alt=""
+          class="md:block hidden lg:block px-8"
+        />
+        <div class="w-full flex absolute bottom-[-25px] justify-center">
+          <button
+            class="
+              w-14
+              h-14
+              mid:w-20 mid:h-20
+              items-center
+              flex flex-col
+              justify-center
+              bg-[#59fbab]
+              rounded-full
+              lg:w-14 lg:h-14
+              active:shadow-lg active:shadow-[#59fbab]/50
+            "
+            id="getAdviceButton"
+          >
+            <img src="images/icon-dice.svg" class="p-[16px] md:w-16" alt="" />
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
